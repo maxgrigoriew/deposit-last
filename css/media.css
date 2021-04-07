@@ -18,7 +18,7 @@
         width: 100%;
         padding: 15px;
         transition: transform 0.3s ease-in-out;
-        z-index: 3;
+        z-index: 100;
     }
 
     .menu.active {
@@ -59,11 +59,12 @@
     }
 
     .advantages__items {
+        display: flex;
         justify-content: space-around;
     }
 
     .advantages__item {
-        width: 48%;
+        /* width: 48%; */
     }
 
     .advantages {
@@ -316,6 +317,29 @@
 
     .footer__middle-contacts-text {
         text-align: center;
+    }
+
+    .advantages__items {
+        flex-wrap: nowrap;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .advantages__item {
+        padding: 0;
+        /* min-height: auto; */
+        width: 100%;
+    }
+
+
+    .advantages__item-top__title {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .advantages__item-content {
+        font-size: 14px;
+        line-height: 22px;
     }
 }
 

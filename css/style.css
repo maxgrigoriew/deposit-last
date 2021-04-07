@@ -9,7 +9,15 @@
     background: var(--accent);
     cursor: pointer;
     border: none;
-    padding: 15px 54px 16px;
+    padding: 15px 52px 16px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    color: var(--accent);
+    background: #fff;
+    border: 1px solid var(--accent);
 }
 
 .burger {
@@ -141,6 +149,11 @@ body {
     line-height: 26px;
     text-decoration: none;
     color: var(--default);
+    transition: all 0.3s ease-in-out;
+}
+
+.menu__link:hover {
+    color: var(--accent);
 }
 
 .header-top__contacts {
@@ -177,6 +190,12 @@ body {
     font-size: 16px;
     line-height: 19px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-top__contacts-btn:hover {
+    color: #fff;
+    background: var(--accent);
 }
 
 .top {
@@ -301,14 +320,15 @@ body {
 }
 
 .advantages__items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    column-gap: 30px;
+
+    min-width: 0;
+    /* display: flex; */
+    /* justify-content: space-between;
+    flex-wrap: wrap; */
 }
 
 .advantages__item {
-    width: 370px;
+    width: 44%;
     min-height: 270px;
     padding: 25px 30px 20px 25px;
     box-shadow: 0px 3px 20px #EAECEF;
@@ -436,7 +456,7 @@ body {
 }
 
 .form__right-button {
-    padding: 20px 73px 21px;
+    padding: 20px 70px 21px;
     display: block;
     font-weight: bold;
     font-size: 16px;
@@ -641,7 +661,7 @@ body {
     margin-bottom: 15px;
     position: relative;
     transition: all 0.3s ease-in-out;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .accordion-title__circle:before {
@@ -756,6 +776,38 @@ body {
 .no-js .accordionItem.is-collapsed {
     max-height: auto;
 
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 7px;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #E6E6E6;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--accent);
+}
+
+.swiper-pagination {
+    padding-top: 30px;
+    position: static;
 }
 
 /* .animateIn {

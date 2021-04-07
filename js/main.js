@@ -88,3 +88,37 @@ let checkNumPhone = (e) => {
 telInp.addEventListener('focus', whenFocusPhone);
 telInp.addEventListener('input', checkNumPhone);
 telInp.addEventListener('keydown', checkPhoneKey);
+
+const slider = document.querySelector('.slider-container');
+
+let mySwiper;
+
+function mobileSlider() {
+	if (window.innerWidth <= 767 && slider.dataset.mobile == 'false') {
+		mySwiper = new Swiper(slider, {
+			slidesPerView: 1,
+			loop: true,
+			slideClass: 'advantages__item',
+			sliderPreGroup: 1,
+			centeredSlides: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+		slider.dataset.mobile = 'true';
+	}
+
+	if (window.innerWidth > 767) {
+		slider.dataset.mobile = 'false';
+		// if (slider.classList.contains('swiper-container-initialized') {
+		// 		mySwiper.destroy();
+		// 	});
+	}
+}
+
+mobileSlider();
+
+window.addEventListener('resize', () => {
+	mobileSlider();
+})
