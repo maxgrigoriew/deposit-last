@@ -97,6 +97,10 @@ body {
     color: var(--default);
 }
 
+.body.lock {
+    overflow: hidden;
+}
+
 .container {
     max-width: 1200px;
     padding: 0 15px;
@@ -105,6 +109,12 @@ body {
 
 .header {
     background: #fff;
+    position: fixed;
+    background: #fff;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .header__inner {
@@ -119,6 +129,7 @@ body {
 
 .menu__list {
     display: flex;
+    overflow-y: auto;
 }
 
 .menu__item+.menu__item {
@@ -172,6 +183,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-top: 82px;
 }
 
 .top__inner {

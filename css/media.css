@@ -14,11 +14,11 @@
         background: var(--accent);
         left: -100%;
         top: 82px;
-        height: calc(100% - 82px);
+        height: calc(100vh - 82px);
         width: 100%;
         padding: 15px;
         transition: transform 0.3s ease-in-out;
-        z-index: 1;
+        z-index: 3;
     }
 
     .menu.active {
@@ -213,12 +213,13 @@
 
     .menu {
         top: 66px;
-        height: calc(100% - 66px);
+        height: calc(100vh - 66px);
 
     }
 
     .top {
         background-image: none !important;
+        margin-top: 66px;
     }
 
     .top__inner {
